@@ -1,6 +1,9 @@
 FROM n8nio/n8n:latest
 
-# Cập nhật và cài đặt gói với mirror mặc định
+# Chuyển sang user root để có quyền
+USER root
+
+# Cập nhật và cài đặt gói
 RUN apk update && apk add --no-cache python3 py3-pip ffmpeg
 
 # Cài thư viện Python
